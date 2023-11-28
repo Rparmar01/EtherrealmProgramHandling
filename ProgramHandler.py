@@ -4,6 +4,16 @@ from nbconvert.preprocessors import ExecutePreprocessor
 
 # PREREQUISITE: nbconvert must be installed and all prerequisites of shap-e notebook must be installed before running.
 
+
+prompt = ''
+with open('input.txt', 'r') as f:
+    lines = f.readlines
+    prompt = lines
+print(prompt)
+
+
+
+
 # Specify the path to your Jupyter Notebook file
 notebook_path = ''
 
