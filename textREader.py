@@ -16,7 +16,7 @@ def read_and_print_updated_text(file_path):
         print(f'Updated Text:\n{updated_text}')
 
 if __name__ == "__main__":
-    file_path_to_watch = f"C:\\Users\\rparm\\Documents\\GitHub\\Shap-eTextToMeshGit\\EtherrealmProgramHandling\\sample_text_input.txt"
+    file_path_to_watch = f""
  
     event_handler = MyHandler()
     observer = Observer()
