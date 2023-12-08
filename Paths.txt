@@ -1,0 +1,1 @@
+C:\\Users\\rparm\\Documents\\GitHub\\Shap-eTextToMeshGit\\EtherrealmProgramHandling\\sample_text_input.txt

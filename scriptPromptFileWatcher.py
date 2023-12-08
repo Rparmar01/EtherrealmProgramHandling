@@ -1,6 +1,11 @@
 import os
 import time
+import signal
 import traceback
+import ProgramHandler
+
+
+readTextContent = ""
 
 class FileModified():
     def __init__(self, file_path, callback):
@@ -26,7 +31,10 @@ class FileModified():
 def file_modified():
     with open('sample_text_input.txt', 'r'  ) as f:
         lines = f.read()
+        readTextContent = lines
         print("File Modified!", lines)
+        # Send signal to ProgramHandler here: 
+        ProgramHandler.runJob()
     return False
 
 fileModifiedHandler = FileModified(r"sample_text_input.txt",file_modified)

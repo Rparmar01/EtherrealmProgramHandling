@@ -1,31 +1,33 @@
 import os 
-import nbformat
-from nbconvert.preprocessors import ExecutePreprocessor
+import time 
+import signal
+
 
 # PREREQUISITE: nbconvert must be installed and all prerequisites of shap-e notebook must be installed before running.
 
+def signal_handler(signum, frame):
+    # Handle the signal here (e.g., read the variable and execute code)
+    print(f"Received signal {signum}. Executing ProgramHandler.py logic.")
+    # Add your code to execute in response to the signal
+     # print(f"Text content received: {scriptPromptFileWatcher.readText}")
 
 
-# Specify the path to your Jupyter Notebook file
-notebook_path = f''
+def runJob(promptInput):
+    # Another way to access the prompt input 
+    '''
+    infile = open('sample_text_input.txt', 'r')
+    promptString = str(infile.read())
+    infile.close()
+    print("Prompt string is", promptString)
+    '''
+    # Call the Shap-e Model with promptInput as the prompt
+    
 
-# Read the notebook
-with open(notebook_path) as f:
-    notebook = nbformat.read(f, as_version=4)
+    # Run ply to fbx conversion script to bake ply mesh to fbx object file
+    # os.system("python ply_to_fbx.py")
 
-# Create an ExecutePreprocessor. The timeout=-1 means no timeout for cell execution, but this can be adjusted
-execute_processor = ExecutePreprocessor(timeout=-1)
-
-# Execute the notebook
-execute_processor.preprocess(notebook, {'metadata': {'path': '.'}})
-
-# Save modified notebooks (Will preserve updated output within notebook)
-with open(notebook_path, 'w', encoding='utf-8') as f:
-    nbformat.write(notebook, f)
+    #Export fbx object to engine (Unreal Engine in this case)
 
 
-# Run ply to fbx conversion script to bake ply mesh to fbx object file
-os.system("python ply_to_fbx.py")
 
-#Export fbx object to engine (Unreal Engine in this case)
 
