@@ -34,7 +34,7 @@ def file_modified():
         readTextContent = lines
         print("File Modified!", lines)
         # Send signal to ProgramHandler here: 
-        ProgramHandler.runJob()
+        ProgramHandler.runJob(readTextContent)
     return False
 
 fileModifiedHandler = FileModified(r"sample_text_input.txt",file_modified)
