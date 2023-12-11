@@ -17,7 +17,6 @@ def runJob(promptInput):
     infile.close()
     print("Prompt string is", promptString)
     '''
-
     
     try:
         # Check if Meshfiles directory exists within parent directory and create it if it does not 
@@ -25,12 +24,12 @@ def runJob(promptInput):
             print("Meshfiles directory does not exist! Creating directory...")
             os.mkdir("./Meshfiles")
     except FileNotFoundError as e:
-        print("Error with defined filepaths")
+        print("Error with defined filepaSths")
     finally: 
         # Call the Shap-e Model with promptInput as the prompt
         print("Calling object generation model.")
 
-        # Run ply to fbx conversion script to bake ply mesh to fbx object file (REQUIRED IF USING POINT-E, OPTIONAL FOR SHAP-E)
+        # Run ply to fbx conversion script to bake ply mesh to fbx object file (Required for POINT-E, SHAP-E will save as objS )
         #print("Calling mesh to object conversion")
         #os.system("python ply_to_fbx.py")
 

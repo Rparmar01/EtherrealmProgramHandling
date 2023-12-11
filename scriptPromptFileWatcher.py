@@ -29,7 +29,7 @@ class FileModified():
 
 
 def file_modified():
-    with open('sample_text_input.txt', 'r'  ) as f:
+    with open('SavedText.txt', 'r'  ) as f:
         lines = f.read()
         readTextContent = lines
         print("File Modified!", lines)
