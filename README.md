@@ -1,3 +1,6 @@
+NOTE: This is a private repo to replace Point-eAutomatedFlow for use as Point-e is deprecated in favor of Shap-e for Etherrealm.
+
+
 # Introduction 
 Currently, scriptPromptFileWatcher.py is supposed to run on game startup, observing whether SavedText.txt has changed. Once the text file is updated, the file calls ProgramHandler to run a job, which will then issue an HTTP request to the API that is hosting the text-to-3d model for a mesh file (and once implemented, necessary color/texture files). If correct mesh files are given as a response, then the game will import the meshfiles. Otherwise, if the response times out or if the meshfiles are corrupted/incorrect, the program will let the user know that either the request timed out or that the object file was corrupted. The user will need to define the API key in settings. 
 
