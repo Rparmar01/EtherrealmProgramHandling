@@ -18,23 +18,21 @@ def runJob(promptInput):
     print("Prompt string is", promptString)
     '''
     
-    try:
-        # Check if Meshfiles directory exists within parent directory and create it if it does not 
-        if not os.path.isdir("Meshfiles"):
-            print("Meshfiles directory does not exist! Creating directory...")
-            os.mkdir("./Meshfiles")
-    except FileNotFoundError as e:
-        print("Error with defined filepaSths")
-    finally: 
-        # Call the Shap-e Model with promptInput as the prompt
-        print("Calling object generation model.")
+    # Call the Shap-e Model with promptInput as the prompt
+    print("Calling object generation model.")
 
-        # Run ply to fbx conversion script to bake ply mesh to fbx object file (Required for POINT-E, SHAP-E will save as objS )
-        #print("Calling mesh to object conversion")
-        #os.system("python ply_to_fbx.py")
+    # Run ply to fbx conversion script to bake ply mesh to fbx object file (Required for POINT-E, SHAP-E will save as objS )
+    '''
+    print("Calling mesh to object conversion")
+    os.system("python ply_to_fbx.py")
+    '''
+    
+    #Export fbx object to engine (Unreal Engine in this case)
+    #print("Exporting to Unreal Engine")
 
-        #Export fbx object to engine (Unreal Engine in this case)
-        #print("Exporting to Unreal Engine")
+    #Signal Engine to import Generated Meshes into scene
+    
+    #os.chdir("./Etherrealm/Content/Meshes/GeneratedMeshes")
 
 
-runJob("Cat")
+

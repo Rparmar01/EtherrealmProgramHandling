@@ -37,5 +37,5 @@ def file_modified():
         ProgramHandler.runJob(readTextContent)
     return False
 
-fileModifiedHandler = FileModified(r"sample_text_input.txt",file_modified)
+fileModifiedHandler = FileModified(r"SavedText.txt",file_modified)
 fileModifiedHandler.start()
