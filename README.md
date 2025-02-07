@@ -1,4 +1,4 @@
-NOTE: This is a private repo to replace Point-eAutomatedFlow for use as Point-e is deprecated in favor of Shap-e for Etherrealm.
+This is a repo to replace Point-eAutomatedFlow for use as Point-e is deprecated in favor of Shap-e for Etherrealm.
 
 # Etherrealm Program Handler 
 This repo will take user input from Unreal Engine as a .text file, generate a 3D mesh file from the input, convert the mesh file (usually a .ply extension) to a baked .fbx object file using Blender, and finally copy the object file to a directory within Unreal Engine for use.
